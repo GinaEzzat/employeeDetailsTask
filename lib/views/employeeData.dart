@@ -1,5 +1,6 @@
 import 'package:employee_data/models/employee_model.dart';
 import 'package:employee_data/services/employee_service.dart';
+import 'package:employee_data/views/employeeDetails.dart';
 import 'package:flutter/material.dart';
 
 class EmployeeData extends StatefulWidget {
@@ -29,15 +30,25 @@ class _EmployeeDataState extends State<EmployeeData> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-        itemCount: employee.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(employee[index].name),
-            subtitle: Text(employee[index].username),
-          );
-        },
-      ),
+      body: loading ?
+      Center(
+        child: CircularProgressIndicator(),
+      )
+        : ListView.builder(
+            itemCount: employee.length,
+            itemBuilder: (context, index) {
+              return 
+              InkWell(
+          onTap: () {
+            Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => EmployeeDetails(employeedetail: employee[index],)));
+          },
+          child:ListTile(
+                title: Text(employee[index].name),
+                subtitle: Text(employee[index].username),
+               ) );
+            },
+          ),
     );
   }
 }
