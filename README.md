@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+# EmployeeDetails
+we add a new page called employeedetails to fetch each employee data and present them on the screen
+
+# cachingData
+we added some functions to cache data and present them 
+we used shared preference package 
+and for getting data from API we used the dio package instead of HTTP 
