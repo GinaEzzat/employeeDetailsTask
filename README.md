@@ -19,6 +19,6 @@ samples, guidance on mobile development, and a full API reference.
 we add a new page called employeedetails to fetch each employee data and present them on the screen
 
 # cachingData
-we added some functions to cache data and present them 
-we used shared preference package 
-and for getting data from API we used the dio package instead of HTTP 
+#we added some functions to cache data and present them 
+#we used shared preference package 
+#and for getting data from API we used the dio package instead of HTTP 
