@@ -20,9 +20,12 @@ class _EmployeeDetailsState extends State<EmployeeDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Details Page",textAlign: TextAlign.center,),
+        centerTitle: true,
+        title: Text("Details Page"),
+        backgroundColor: Colors.blueGrey ,
       ),
-      body: Container(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Icon(Icons.person_rounded,
